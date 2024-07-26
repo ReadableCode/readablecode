@@ -6,6 +6,10 @@ Greetings! I'm a passionate developer dedicated to crafting elegant and efficien
 
 ### Current Projects
 
+- **Terminal Based Kanban Board Using Linux Commands for Manipulation:** I'm developing a terminal-based Kanban board that leverages Linux commands for manipulation. This project aims to streamline task management and enhance productivity by providing a seamless interface for organizing and tracking tasks.
+
+- **Rust and Go based data tool packs to allow for data science and analytics similar to my python libraries:** I'm working on a Go-based and a Rust-based data tool pack that enables data science and analytics professionals to leverage the Rust language. This initiative seeks to empower users with efficient and high-performance tools for data processing, analysis, and visualization.
+
 - **Sync Application for Removable Storage:** I'm developing a synchronization application tailored for removable storage. This application ensures seamless syncing of sensitive directories, such as Git repositories, while handling line-ending conversions, local discovery, and sync change management. Additionally, I'm incorporating the option to symlink externally post-sync.
 
 - **Dotfile Sync Application:** My work involves creating a dotfile synchronization application. This tool empowers me to apply settings to non-configurable applications on mobile devices through AHK, Tasker, and iOS actions. This will also pull configurations over SSH or SCP from devices that generally dont support symlinking into a git repo like my router and unraid server. The goal is to achieve a consistent experience across platforms.
