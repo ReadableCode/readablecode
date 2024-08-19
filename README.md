@@ -6,7 +6,7 @@ Greetings! I'm a passionate developer dedicated to crafting elegant and efficien
 
 ### Current Projects
 
-- **A 2D game written in C# using the Unity engine:** I'm developing a 2D game with my wife using C# and the Unity engine. This project aims to showcase my creativity and programming skills while exploring the intricacies of game development. I'm excited to bring this vision to life and create an engaging gaming experience.
+- **A 2D game written in C# using the Unity engine:** I'm developing a 2D game with my wonderful wife using C# and the Unity engine. This project aims to showcase my creativity and programming skills while exploring the intricacies of game development. I'm excited to bring this vision to life and create an engaging gaming experience.
 
 - **Terminal Based Kanban Board Using Linux Commands for Manipulation:** I'm developing a terminal-based Kanban board that leverages Linux commands for manipulation. This project aims to streamline task management and enhance productivity by providing a seamless interface for organizing and tracking tasks.
 
