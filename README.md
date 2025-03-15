@@ -6,7 +6,7 @@ Greetings! I am a passionate developer dedicated to automation and documentation
 
 ### Current Projects
 
-- **Python, Rust and Go based data tool packs to allow for data science and analytics without all the setup:** I'm working on Python, Rust and Go based data tool packs that enable data science and analytics professionals to access different platforms (e.g. Snowflake, RDS, AWS S3, Vault, Databricks) easily without all the setup. This initiative seeks to empower users with efficient and high-performance tools for data processing, analysis, and visualization.
+- **Python, Rust, and Go based data tool packs to allow for data science and analytics without all the setup:** I'm working on Python, Rust and Go based data tool packs that enable data science and analytics professionals to access different platforms (e.g. Snowflake, RDS, AWS S3, Vault, Databricks) easily without all the setup. This initiative seeks to empower users with efficient and high-performance tools for data processing, analysis, and visualization.
 
   [Check out the Python repo](https://github.com/ReadableCode/Data_Tool_Pack_Py)
   
