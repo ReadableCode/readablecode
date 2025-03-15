@@ -2,7 +2,7 @@
 
 ## About Me
 
-Greetings! I am a passionate developer dedicated to automation and documentation-as-code type solutionts to issues I find interesting. These are my personal projects and this account only hold my non-professional codebases. Please comment, fork and contribute as you see fit. I am always looking for ways to improve my code and learn new things.
+Greetings! I am a passionate developer dedicated to automation and documentation-as-code type solutionts to issues I find interesting. These are my personal projects and this account only holds my non-professional codebases. Please comment, fork and contribute as you see fit. I am always looking for ways to improve my code and learn new things.
 
 ### Current Projects
 
