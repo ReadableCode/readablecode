@@ -24,7 +24,7 @@ Greetings! I am a passionate developer dedicated to automation and documentation
 
 - **A Girl's Guide to Georgetown:** This project provides high school students in Georgetown, Texas, with a structured backend while allowing them full creative control over the frontend. The backend, built in Go with Fiber, dynamically serves pages without requiring container rebuilds. It is deployed via Docker Compose on a Linux server, reverse-proxied through SWAG, and managed with Cloudflare and DuckDNS. Students handle the HTML, CSS, and JavaScript, ensuring they can iterate freely without backend constraints. This setup fosters student-led development while maintaining a stable and scalable foundation.
 
-  [Check out the repo](https://github.com/ReadableCode/A-Girls-Guide-To-Georgetown)
+  [Check out the repo](https://github.com/ReadableCode/a_girls_guide_to_georgetown)
 
 - **Sync Application for Removable Storage:** I'm developing a synchronization application tailored for removable storage. This application ensures seamless syncing of sensitive directories, such as Git repositories, while handling line-ending conversions, local discovery, and sync change management. Additionally, I'm incorporating the option to symlink externally post-sync.
 
