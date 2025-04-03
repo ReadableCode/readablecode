@@ -17,6 +17,10 @@ Greetings! I am a passionate developer dedicated to automation and documentation
 - **Terminal Based Kanban Board Using Linux Commands for Manipulation:** I'm developing a terminal-based Kanban board that leverages Linux-like commands for manipulation. This project aims to streamline task management and enhance productivity by providing a seamless interface for organizing and tracking tasks.
 
   [Check out my progress](https://github.com/ReadableCode/Terminal_To_Do)
+  
+- **AI-Powered eBook Organizer (Offline-First):** A smart eBook renaming and organization tool that processes messy ebook folders and uses a local large language model (no internet or accounts required) to identify metadata like author, series, series order, and title. It restructures your library into a clean, nested format by author and series. Built for full local use, but easily swappable to OpenAI or other APIs if desired.
+
+  [Check out the repo](https://github.com/ReadableCode/Book-Bot)
 
 - **Dotfile Sync Application:** My work involves creating a dotfile synchronization application. This tool empowers me to apply settings to non-configurable applications on mobile devices through AHK, Tasker, and iOS actions. This will also pull configurations over SSH or SCP from devices that generally dont support symlinking into a git repo like my router and unraid server. The goal is to achieve a consistent experience across platforms.
 
