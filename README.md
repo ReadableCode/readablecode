@@ -2,7 +2,7 @@
 
 ## About Me
 
-Greetings! I am a passionate developer dedicated to automation and documentation-as-code type solutionts to issues I find interesting. These are my personal projects and this account only holds my non-professional codebases. Please comment, fork and contribute as you see fit. I am always looking for ways to improve my code and learn new things.
+Greetings! I am a passionate developer dedicated to automation and modular solutions to issues I find interesting. These are my personal projects and this account only holds my non-professional codebases. Please comment, fork and contribute as you see fit. I am always looking for ways to improve my code and learn new things.
 
 ### Current Projects
 
@@ -15,10 +15,18 @@ Greetings! I am a passionate developer dedicated to automation and documentation
   [Check out the Rust repo](https://github.com/ReadableCode/Data_Tool_Pack_RS)
 
 - **Terminal Based Kanban Board Using Linux Commands for Manipulation:** I'm developing a terminal-based Kanban board that leverages Linux-like commands for manipulation. This project aims to streamline task management and enhance productivity by providing a seamless interface for organizing and tracking tasks.
+  - Stack:
+    - Frontend: Python for the TUI
+    - Storage: Self hosted S3-compatible storage (MinIO)
+    - Hosting: Built for local running in Windows or Linux
 
   [Check out my progress](https://github.com/ReadableCode/Terminal_To_Do)
   
 - **AI-Powered eBook Organizer (Offline-First):** A smart eBook renaming and organization tool that processes messy ebook folders and uses a local large language model (no internet or accounts required) to identify metadata like author, series, series order, and title. It restructures your library into a clean, nested format by author and series. Built for full local use, but easily swappable to OpenAI or other APIs if desired.
+  - Stack:
+    - Frontend: Python for the TUI
+    - Storage: Self hosted PostgreSQL Database
+    - Hosting: PostgresQL database running in Docker and exposed through TailScale
 
   [Check out the repo](https://github.com/ReadableCode/Book-Bot)
 
@@ -27,10 +35,19 @@ Greetings! I am a passionate developer dedicated to automation and documentation
   [Check out the repo](https://github.com/ReadableCode/dotfiles)
 
 - **A Girl's Guide to Georgetown:** This project provides high school students in Georgetown, Texas, with a structured backend while allowing them full creative control over the frontend. The backend, built in Go with Fiber, dynamically serves pages without requiring container rebuilds. It is deployed via Docker Compose on a Linux server, reverse-proxied through SWAG, and managed with Cloudflare and DuckDNS. Students handle the HTML, CSS, and JavaScript, ensuring they can iterate freely without backend constraints. This setup fosters student-led development while maintaining a stable and scalable foundation.
+  - Stack:
+    - Frontend: HTML, CSS, JavaScript
+    - Backend: Go with Fiber
+    - Hosting: Self-hosted Kubernetes cluster (K3S)
+    - Ingress: NGINX reverse proxy with SWAG in Docker-Compose
 
   [Check out the repo](https://github.com/ReadableCode/a_girls_guide_to_georgetown)
 
 - **Sync Application for Removable Storage:** I'm developing a synchronization application tailored for removable storage. This application ensures seamless syncing of sensitive directories, such as Git repositories, while handling line-ending conversions, local discovery, and sync change management. Additionally, I'm incorporating the option to symlink externally post-sync.
+  - Stack:
+    - Frontend: Python for the TUI
+    - Storage: Designed for local storage
+    - Hosting: Built for local running in Windows or Linux for internal or attached storage (could include network maps)
 
   [Check out the repo](https://github.com/ReadableCode/Sync_Plex)
 
