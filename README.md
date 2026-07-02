@@ -1,60 +1,99 @@
-# ReadableCode
+# Hi, I'm Jason — "ReadableCode" 👋
 
-## About Me
+Greetings! I'm a developer dedicated to **automation** and **modular, reusable solutions** to problems I find interesting. Everything here is a personal project — please comment, fork, and contribute as you see fit. I'm always looking for ways to improve my code and learn new things.
 
-Greetings! I am a passionate developer dedicated to automation and modular solutions to issues I find interesting. These are my personal projects and this account only holds my non-professional codebases. Please comment, fork and contribute as you see fit. I am always looking for ways to improve my code and learn new things.
+Most of what I build ends up running on a self-hosted homelab: a fleet of machines behind a reverse proxy, wired together with Docker, auto-deployed on push. The projects below are the things that live there.
 
-### Current Projects
+---
 
-- **Python, Rust, and Go based data tool packs to allow for data science and analytics without all the setup:** I'm working on Python, Rust and Go based data tool packs that enable data science and analytics professionals to access different platforms (e.g. Snowflake, RDS, AWS S3, Vault, Databricks) easily without all the setup. This initiative seeks to empower users with efficient and high-performance tools for data processing, analysis, and visualization.
+## 🌐 Find me in two places
 
-  [Check out the Python repo](https://github.com/ReadableCode/Data_Tool_Pack_Py)
-  
-  [Check out the GoLang repo](https://github.com/ReadableCode/Data_Tool_Pack_GO)
-  
-  [Check out the Rust repo](https://github.com/ReadableCode/Data_Tool_Pack_RS)
+> ### 🖥️ [**site.tinkernet.me**](https://site.tinkernet.me) — my live self-hosted portfolio
+> Dynamically served straight from my own homelab, complete with an **interactive in-browser terminal** and a **live FastAPI backend**. Not a static host — the uptime you see is real.
+>
+> ### 📄 [**readablecode.github.io**](https://readablecode.github.io) — GitHub Pages
+> The same portfolio as a fast, static build.
 
-- **Terminal Based Kanban Board Using Linux Commands for Manipulation:** I'm developing a terminal-based Kanban board that leverages Linux-like commands for manipulation. This project aims to streamline task management and enhance productivity by providing a seamless interface for organizing and tracking tasks.
-  - Stack:
-    - Frontend: Python for the TUI
-    - Storage: Self hosted S3-compatible storage (MinIO)
-    - Hosting: Built for local running in Windows or Linux
+**Fun fact:** you can read my bio straight from your terminal —
 
-  [Check out my progress](https://github.com/ReadableCode/Terminal_To_Do)
-  
-- **AI-Powered eBook Organizer (Offline-First):** A smart eBook renaming and organization tool that processes messy ebook folders and uses a local large language model (no internet or accounts required) to identify metadata like author, series, series order, and title. It restructures your library into a clean, nested format by author and series. Built for full local use, but easily swappable to OpenAI or other APIs if desired.
-  - Stack:
-    - Frontend: Python for the TUI
-    - Storage: Self hosted PostgreSQL Database
-    - Hosting: PostgresQL database running in Docker and exposed through TailScale
+```bash
+curl https://site.tinkernet.me/api/my-info
+```
 
-  [Check out the repo](https://github.com/ReadableCode/Book-Bot)
+That's my own self-hosted API answering, live.
 
-- **Dotfile Sync Application:** My work involves creating a dotfile synchronization application. This tool empowers me to apply settings to non-configurable applications on mobile devices through AHK, Tasker, and iOS actions. This will also pull configurations over SSH or SCP from devices that generally dont support symlinking into a git repo like my router and unraid server. The goal is to achieve a consistent experience across platforms.
+---
 
-  [Check out the repo](https://github.com/ReadableCode/dotfiles)
+## 🚀 Projects
 
-- **A Girl's Guide to Georgetown:** This project provides high school students in Georgetown, Texas, with a structured backend while allowing them full creative control over the frontend. The backend, built in Go with Fiber, dynamically serves pages without requiring container rebuilds. It is deployed via Docker Compose on a Linux server, reverse-proxied through SWAG, and managed with Cloudflare and DuckDNS. Students handle the HTML, CSS, and JavaScript, ensuring they can iterate freely without backend constraints. This setup fosters student-led development while maintaining a stable and scalable foundation.
-  - Stack:
-    - Frontend: HTML, CSS, JavaScript
-    - Backend: Go with Fiber
-    - Hosting: Self-hosted Kubernetes cluster (K3S)
-    - Ingress: NGINX reverse proxy with SWAG in Docker-Compose
+### Data & analytics
 
-  [Check out the repo](https://github.com/ReadableCode/a_girls_guide_to_georgetown)
+- **[Data Tool Pack](https://github.com/ReadableCode/Data_Tool_Pack_Py) — Python · Go · Rust**
+  A batteries-included data-engineering toolkit: uniform connectors for Snowflake, Databricks, S3, Vault, DuckDB, Google Workspace, and Looker, so analytics work can start without paying the setup tax. Three language editions:
+  [Python](https://github.com/ReadableCode/Data_Tool_Pack_Py) · [Go](https://github.com/ReadableCode/Data_Tool_Pack_GO) · [Rust](https://github.com/ReadableCode/Data_Tool_Pack_RS)
 
-- **Sync Application for Removable Storage:** I'm developing a synchronization application tailored for removable storage. This application ensures seamless syncing of sensitive directories, such as Git repositories, while handling line-ending conversions, local discovery, and sync change management. Additionally, I'm incorporating the option to symlink externally post-sync.
-  - Stack:
-    - Frontend: Python for the TUI
-    - Storage: Designed for local storage
-    - Hosting: Built for local running in Windows or Linux for internal or attached storage (could include network maps)
+- **[duck_db_api](https://github.com/ReadableCode/duck_db_api)**
+  A thin FastAPI service over DuckDB for ad-hoc table create / insert / query, with basic safety guards and file-upload ingestion.
 
-  [Check out the repo](https://github.com/ReadableCode/Sync_Plex)
+### Self-hosted infrastructure
 
-- **A 2D game written in C# using the Unity engine:** I'm developing a 2D game with my wonderful wife using C# and the Unity engine. This project aims to showcase my creativity and programming skills while exploring the intricacies of game development. I'm excited to bring this vision to life and create an engaging gaming experience. This one is not open source yet.
+- **[Self-hosted platform (Docker)](https://github.com/ReadableCode/Docker)**
+  The infrastructure everything else runs on: multi-host Docker Compose behind a SWAG reverse proxy with automatic TLS and dynamic DNS, a private container registry, self-hosted secrets, object storage, metrics, and notifications — plus a push-to-master pipeline that rebuilds only the services whose repo changed.
 
-### Collaboration and Engagement
+- **[dotfiles](https://github.com/ReadableCode/dotfiles)**
+  A cross-platform config-sync and provisioning system spanning Linux, Windows, macOS, Android, a router, and a NAS. Pulls configs over SSH/SCP from devices that can't symlink into a repo, provisions with Ansible, and ships a Go `git_puller` cross-compiled for four OS/arch targets.
 
-I'm enthusiastic about collaborating with fellow developers and enthusiasts on these projects. Whether you're interested in contributing, have questions, or would like to explore potential synergies, please don't hesitate to reach out. Let's join forces to drive innovation and create impactful solutions together.
+- **[herdstone](https://github.com/ReadableCode/herdstone)**
+  A cross-platform machine-herd monitor. One Python engine with three thin presentation layers — a Typer CLI, a Textual TUI, and a NiceGUI web app — that import it in-process, no internal REST layer. It fans out concurrent ICMP pings across a host inventory, does OS-aware disk-usage, pushes SSH keys, and puts `--json` on every command so native shells can consume it as a subprocess. The inventory is a single JSON file, so adding a machine is a config edit, not code (with an Ansible-inventory importer to bootstrap it).
 
-Feel free to connect with me if you're intrigued by any of these initiatives. Your insights and contributions are highly valued!
+### Apps & services
+
+- **[load-log](https://github.com/ReadableCode/load-log)**
+  A personal health tracker (habits + workouts) with a Textual TUI and a Streamlit web UI over a shared data plane. Neither UI touches Postgres directly — both authenticate to a JWT service and read/write through PostgREST, with a per-schema Postgres role plus Row-Level Security enforcing access. Alembic migrations and two Docker Compose profiles (portable vs. self-contained).
+
+- **[postgrest-auth](https://github.com/ReadableCode/postgrest-auth)**
+  A small, app-agnostic JWT auth microservice that sits beside PostgREST: `POST /token` verifies a bcrypt hash and returns a JWT carrying the Postgres role and user id for RLS. Add once, reuse across every app.
+
+- **[Cash Flow Commander](https://github.com/ReadableCode/Cash_Flow_Commander)**
+  A personal-finance manager designed for multiple front-ends over pluggable storage backends — Postgres today, with Sheets / SQLite / Excel planned.
+
+- **[Book-Bot](https://github.com/ReadableCode/Book-Bot)**
+  An offline-first, AI-powered eBook organizer. A local LLM (no internet or accounts required) infers author, series, order, and title from messy folders and restructures libraries into clean nested trees — with a clean swap path to hosted APIs, and SQLite or Postgres backends.
+
+- **[Terminal To-Do](https://github.com/ReadableCode/Terminal_To_Do)**
+  A terminal Kanban board driven by Linux-like commands, with pluggable cloud-backed storage (self-hosted MinIO/S3 or Google Sheets).
+
+### Web & games
+
+- **[A Girl's Guide to Georgetown](https://github.com/ReadableCode/a_girls_guide_to_georgetown)**
+  A student-led dev platform: a Go/Fiber backend dynamically serves pages so students own the HTML/CSS/JS and iterate without backend rebuilds. Deployed with Docker Compose behind SWAG.
+
+- **[Trojan-Force](https://github.com/ReadableCode/Trojan-Force)**
+  A browser tower-defense game (TypeScript + Phaser 3 + Vite): mine resources, build supply chains, and survive 20 waves. Hand-rolled pathfinding, resource manager, and event bus, with LAN multi-device play.
+
+- **A 2D game in Unity / C#** — building this one with my wonderful wife. Not open source yet, but it's teaching me a lot about game development.
+
+> This portfolio site itself is a project too — React 19 + FastAPI, self-hosted on the same stack described above.
+
+---
+
+## 🛠️ Skills & Tech
+
+| Area | Tools |
+|------|-------|
+| **Languages** | Python (uv-managed), TypeScript, Go, Rust, SQL, Bash / PowerShell / AutoHotkey, C# |
+| **Web / API** | FastAPI, React 19 + Vite, Streamlit, NiceGUI, Phaser 3 |
+| **TUI / CLI** | Textual, Typer, custom terminal apps |
+| **Data** | pandas, DuckDB, warehouse connectors (Snowflake / Databricks / Looker), OCR / PDF |
+| **Databases / storage** | PostgreSQL + PostgREST, Alembic + RLS, SQLite, MinIO / S3, Vault |
+| **Auth / security** | JWT (HS256), bcrypt, Postgres Row-Level Security |
+| **Infra / DevOps** | Docker & multi-host Compose, SWAG reverse proxy + TLS + dynamic DNS, private registry, Ansible, k3s, Tailscale, uv, self-hosted push-to-master auto-deploy |
+| **AI** | Local-LLM inference with a swappable OpenAI backend |
+
+---
+
+## 🤝 Let's build something
+
+I'm always happy to collaborate. Whether you'd like to contribute, have questions, or just want to compare notes on self-hosting and automation, don't hesitate to reach out — your insights and contributions are genuinely welcome.
+
+⭐ Poke around the repos, and drop by [**site.tinkernet.me**](https://site.tinkernet.me) to say hi from the terminal.
