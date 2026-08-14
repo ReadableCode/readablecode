@@ -17,7 +17,7 @@ curl https://site.tinkernet.me/api/my-info
 
 ### Apps and services
 
-- **[Sync_Plex](https://github.com/ReadableCode/Sync_Plex)** - A household media system in two halves: a media remote that searches and adds shows or movies across every Sonarr, Radarr, and Plex server on the network from a CLI, a Textual TUI, or a phone-friendly web app, and a drive-sync tool that mirrors selected titles onto an external drive for travel. The web UI has its own accounts with roles and an approval queue, so household members request titles and an admin approves them.
+- **[Sync_Plex](https://github.com/ReadableCode/Sync_Plex)** - A household media system in two halves: a media remote that searches Plex libraries and adds new shows or movies across the network's media servers from a CLI, a Textual TUI, or a phone-friendly web app, and a drive-sync tool that mirrors selected titles onto an external drive for travel. The web UI has its own accounts with roles and an approval queue, so household members request titles and an admin approves them.
 
 - **[load-log](https://github.com/ReadableCode/load-log)** - A health tracker (habits + workouts) with a Textual TUI and a Streamlit web UI over shared storage. Neither UI touches Postgres directly: both go through PostgREST with JWT auth and row-level security, using a per-schema Postgres role. Alembic migrations and two Docker Compose profiles (portable vs. self-contained).
 
@@ -56,13 +56,15 @@ The portfolio site itself is a project too: React 19 + FastAPI, self-hosted on t
 | Area | Tools |
 |------|-------|
 | **Languages** | Python (uv), TypeScript, Go, Rust, SQL, Bash / PowerShell / AutoHotkey, C# |
-| **Web / API** | FastAPI, React 19 + Vite, Streamlit, NiceGUI, Phaser 3 |
-| **TUI / CLI** | Textual, Typer, custom terminal apps |
-| **Data** | pandas, DuckDB, warehouse connectors (Snowflake / Databricks / Looker), OCR / PDF |
-| **Databases / storage** | PostgreSQL + PostgREST, Alembic + RLS, SQLite, MinIO / S3, Vault |
-| **Auth / security** | JWT (HS256), bcrypt, Postgres Row-Level Security |
-| **Infra / DevOps** | Docker & multi-host Compose, SWAG reverse proxy + TLS + dynamic DNS, Authelia, private registry, Grafana + ntfy, Ansible, k3s, Tailscale, uv, push-to-master auto-deploy |
-| **AI** | Local-LLM inference with a swappable OpenAI backend |
+| **Web / API** | FastAPI, React 19 + Vite, nginx, Streamlit, NiceGUI, Phaser 3 |
+| **TUI / CLI** | Textual, Typer, Rich, custom terminal apps |
+| **Data** | pandas, DuckDB, warehouse connectors (Snowflake/Databricks/Looker), OCR/PDF |
+| **Databases / storage** | PostgreSQL + PostgREST, Alembic + RLS, SQLite, MinIO/S3, Vault |
+| **Auth / security** | Authelia SSO, JWT (HS256), bcrypt/argon2, Postgres Row-Level Security |
+| **Infra / DevOps** | Docker & multi-host Compose, SWAG + TLS + dynamic DNS, private registry, Grafana + ntfy, Ansible, k3s, Tailscale, WireGuard, push-to-master auto-deploy |
+| **Automation / ops** | SSH automation (paramiko, jump hosts), scheduled backups (Postgres dumps, rsync offsite), Home Assistant |
+| **Testing / quality** | pytest, mypy, ESLint, GitHub Actions |
+| **AI** | Local LLM serving (llama.cpp, CUDA), swappable OpenAI backend, agent-assisted development with Claude Code |
 
 ## Contact
 
