@@ -47,6 +47,8 @@ curl https://site.tinkernet.me/api/my-info
 
 - **[Trojan-Force](https://github.com/ReadableCode/Trojan-Force)** - A browser tower-defense game (TypeScript, Phaser 3, Vite): mine resources, build supply chains, survive 20 waves. Custom pathfinding, resource manager, and event bus, plus LAN multi-device play.
 
+- **[Solitaire Associations](https://github.com/ReadableCode/Solitaire_Associations)** - A word-association solitaire game for the browser: word cards deal into tableau columns plus a draw deck, and every card belongs to exactly one of four categories. 150 levels ramp on a single curve that tightens the move budget from about 3.5x a perfect solve down to 1.3x, buries more of the deck face-down, and withdraws hints and jokers as you climb. The game engine is a dependency-free ES module, deterministic given a level and a seed, so the rules are tested under node with no browser involved, including a check that every shipped level is still winnable. Accounts are argon2id over the app's own Postgres schema, reached through PostgREST with row-level security.
+
 - **A 2D game in Unity / C#** - building this one with my wife. Not open source yet.
 
 The portfolio site itself is a project too: React 19 + FastAPI, self-hosted on the same stack.
