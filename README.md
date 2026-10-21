@@ -37,7 +37,7 @@ curl https://site.tinkernet.me/api/my-info
 
 ### Self-hosted infrastructure
 
-- **Self-hosted platform** - The infrastructure everything else runs on: multi-host Docker Compose behind a SWAG reverse proxy with TLS and dynamic DNS. elitedesk, the main server, runs Authelia, Vaultwarden, Postgres with PostgREST and pgAdmin, MinIO, Grafana, ntfy, Portainer, Plex, a private registry, and my own apps, each included from its own repo's compose file. behemoth, an Unraid NAS, holds the bulk storage. Pushing to master redeploys whatever changed. The repo stays private since it maps my internal network.
+- **Self-hosted platform** - The infrastructure everything else runs on: multi-host Docker Compose behind a SWAG reverse proxy with TLS and dynamic DNS. The main server runs Authelia, Vaultwarden, Postgres with PostgREST and pgAdmin, MinIO, Grafana, ntfy, Portainer, Plex, a private registry, and my own apps, each included from its own repo's compose file. An Unraid NAS holds the bulk storage. Pushing to master redeploys whatever changed. The repo stays private since it maps my internal network.
 
 - **[dotfiles](https://github.com/ReadableCode/dotfiles)** - Config sync and provisioning across Linux, Windows, macOS, Android, a router, and a NAS. Pulls configs over SSH/SCP from devices that can't symlink into a repo, provisions with Ansible, and includes a Go `git_puller` cross-compiled for four OS/arch targets.
 
