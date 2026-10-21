@@ -19,11 +19,11 @@ curl https://site.tinkernet.me/api/my-info
 
 - **[Sync_Plex](https://github.com/ReadableCode/Sync_Plex)** - A household media system in two halves: a media remote that searches Plex libraries and adds new shows or movies across the network's media servers from a CLI, a Textual TUI, or a phone-friendly web app, and a drive-sync tool that mirrors selected titles onto an external drive for travel. The web UI has its own accounts with roles and an approval queue, so household members request titles and an admin approves them.
 
-- **[load-log](https://github.com/ReadableCode/load-log)** - A health tracker (habits + workouts) with a Textual TUI and a Streamlit web UI over shared storage. Both read and write only through PostgREST with JWT auth and row-level security, using a per-schema Postgres role; login runs in-process via postgrest-auth. Alembic migrations and two Docker Compose profiles (portable vs. self-contained).
+- **[load-log](https://github.com/ReadableCode/load-log)** - A health tracker (habits + workouts) with a Textual TUI and a Streamlit web UI over shared storage. Both read and write only through PostgREST with JWT auth and row-level security, using a per-schema Postgres role; login runs in-process via postgrest-auth. The app builds its own schema at startup, and two Docker Compose files run it either as a self-contained stack or alone against your own Postgres.
 
 - **[postgrest-auth](https://github.com/ReadableCode/postgrest-auth)** - A small Python library that logs users in for PostgREST apps: it checks an argon2id hash in the app's own users table and returns a JWT carrying the Postgres role and user id for RLS. Written once, imported by my other apps.
 
-- **[Book-Bot](https://github.com/ReadableCode/Book-Bot)** - An offline eBook organizer. A local LLM (no internet or accounts required) works out author, series, order, and title from messy folders and rebuilds the library into clean nested folders. Can be pointed at hosted APIs instead, with SQLite or Postgres backends.
+- **[Book-Bot](https://github.com/ReadableCode/Book-Bot)** - A mobile-first home library website: scan a book's barcode or search by title, file it on the shelves or the wishlist, and see whether you already own that story in another edition. Shared household libraries, per-user reading history and a walkable 3D shelf view. Runs as a self-contained Docker stack (Postgres, PostgREST and the app).
 
 - **[Terminal To-Do](https://github.com/ReadableCode/Terminal_To_Do)** - A terminal Kanban board driven by Linux-like commands, with pluggable storage (self-hosted MinIO/S3 or Google Sheets).
 
@@ -83,7 +83,7 @@ Screenshots come from each project's own repo, taken against demo data.
   <tr>
     <td valign="top">
       <a href="https://github.com/ReadableCode/Book-Bot"><b>Book-Bot</b></a><br>
-      Offline eBook organizer: a local LLM sorts messy folders into a clean library.<br><br>
+      Home library website: scan a barcode to see whether you already own that book in any edition.<br><br>
       <img src="docs/screenshots/projects/book_bot.png" alt="Book-Bot shelves view">
     </td>
     <td valign="top">
@@ -127,7 +127,7 @@ Screenshots come from each project's own repo, taken against demo data.
 | **Web / API** | FastAPI, React 19 + Vite, nginx, Streamlit, NiceGUI, Phaser 3 |
 | **TUI / CLI** | Textual, Typer, Rich, custom terminal apps |
 | **Data** | pandas, DuckDB, warehouse connectors (Snowflake/Databricks/Looker), OCR/PDF |
-| **Databases / storage** | PostgreSQL + PostgREST, Alembic + RLS, SQLite, MinIO/S3, Vault |
+| **Databases / storage** | PostgreSQL + PostgREST, row-level security, SQLite, MinIO/S3, Vault |
 | **Auth / security** | Authelia SSO, JWT (HS256), bcrypt/argon2, Postgres Row-Level Security |
 | **Infra / DevOps** | Docker & multi-host Compose, SWAG + TLS + dynamic DNS, private registry, Grafana + ntfy, Ansible, k3s, Tailscale, WireGuard, push-to-master auto-deploy |
 | **Automation / ops** | SSH automation (paramiko, jump hosts), scheduled backups (Postgres dumps, rsync offsite), Home Assistant |
