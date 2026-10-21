@@ -19,9 +19,9 @@ curl https://site.tinkernet.me/api/my-info
 
 - **[Sync_Plex](https://github.com/ReadableCode/Sync_Plex)** - A household media system in two halves: a media remote that searches Plex libraries and adds new shows or movies across the network's media servers from a CLI, a Textual TUI, or a phone-friendly web app, and a drive-sync tool that mirrors selected titles onto an external drive for travel. The web UI has its own accounts with roles and an approval queue, so household members request titles and an admin approves them.
 
-- **[load-log](https://github.com/ReadableCode/load-log)** - A health tracker (habits + workouts) with a Textual TUI and a Streamlit web UI over shared storage. Neither UI touches Postgres directly: both go through PostgREST with JWT auth and row-level security, using a per-schema Postgres role. Alembic migrations and two Docker Compose profiles (portable vs. self-contained).
+- **[load-log](https://github.com/ReadableCode/load-log)** - A health tracker (habits + workouts) with a Textual TUI and a Streamlit web UI over shared storage. Both read and write only through PostgREST with JWT auth and row-level security, using a per-schema Postgres role; login runs in-process via postgrest-auth. Alembic migrations and two Docker Compose profiles (portable vs. self-contained).
 
-- **[postgrest-auth](https://github.com/ReadableCode/postgrest-auth)** - A small JWT auth service that sits next to PostgREST: `POST /token` checks a bcrypt hash and returns a JWT carrying the Postgres role and user id for RLS. Written once, used by my other apps.
+- **[postgrest-auth](https://github.com/ReadableCode/postgrest-auth)** - A small Python library that logs users in for PostgREST apps: it checks an argon2id hash in the app's own users table and returns a JWT carrying the Postgres role and user id for RLS. Written once, imported by my other apps.
 
 - **[Book-Bot](https://github.com/ReadableCode/Book-Bot)** - An offline eBook organizer. A local LLM (no internet or accounts required) works out author, series, order, and title from messy folders and rebuilds the library into clean nested folders. Can be pointed at hosted APIs instead, with SQLite or Postgres backends.
 
