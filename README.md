@@ -33,8 +33,6 @@ curl https://site.tinkernet.me/api/my-info
 
 - **[readable_utils](https://github.com/ReadableCode/readable_utils)** - A versioned Python utility package that replaced the helper directories I used to copy between repos. Installed from git by tag, with optional dependency extras so each consumer only installs what it needs. herdstone, status_board, and other projects here consume it.
 
-- **[Data Tool Pack](https://github.com/ReadableCode/Data_Tool_Pack_Py)** - Uniform connectors for Snowflake, Databricks, S3, Vault, DuckDB, Google Workspace, and Looker, so analytics work doesn't start with a day of setup. Editions in [Python](https://github.com/ReadableCode/Data_Tool_Pack_Py), [Go](https://github.com/ReadableCode/Data_Tool_Pack_GO), and [Rust](https://github.com/ReadableCode/Data_Tool_Pack_RS).
-
 ### Self-hosted infrastructure
 
 - **Self-hosted platform** - The infrastructure everything else runs on: multi-host Docker Compose behind a SWAG reverse proxy with TLS and dynamic DNS. The main server runs Authelia, Vaultwarden, Postgres with PostgREST and pgAdmin, MinIO, Grafana, ntfy, Portainer, Plex, a private registry, and my own apps, each included from its own repo's compose file. An Unraid NAS holds the bulk storage. Pushing to master redeploys whatever changed. The repo stays private since it maps my internal network.
@@ -115,7 +113,6 @@ Screenshots come from each project's own repo, taken against demo data.
     <td valign="top">
       Also featured, without a UI to show:
       <a href="https://github.com/ReadableCode/readable_utils">readable_utils</a>,
-      <a href="https://github.com/ReadableCode/Data_Tool_Pack_Py">Data Tool Pack</a>,
       <a href="https://github.com/ReadableCode/postgrest-auth">postgrest-auth</a>,
       and the private self-hosted platform the site runs on.
     </td>
